@@ -1,4 +1,4 @@
-![](https://jitpack.io/v/ysutommy/CustomWatch.svg)](https://jitpack.io/#ysutommy/CustomWatch)
+[![](https://jitpack.io/v/ysutommy/CustomWatch.svg)](https://jitpack.io/#ysutommy/CustomWatch)
 
 # CustomWatch
 自定义表盘，canvas绘制
