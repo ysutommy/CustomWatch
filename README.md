@@ -5,12 +5,12 @@
 
 # 使用
 ### Step 1. Add it in your root build.gradle at the end of repositories:
-  allprojects {
-    repositories {
-      ...
-      maven { url 'https://jitpack.io' }
-    }
-  }
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
 
 ### Step 2. Add the dependency
 	dependencies {
@@ -18,6 +18,8 @@
 	}
   
 # 效果图
+![](https://github.com/ysutommy/CustomWatch/blob/master/app/imgs/customwatch.gif "")
+
 ### 白天模式
 ![](https://github.com/ysutommy/CustomWatch/blob/master/app/imgs/white.png "")
 
