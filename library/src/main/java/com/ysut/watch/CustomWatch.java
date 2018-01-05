@@ -85,11 +85,11 @@ public class CustomWatch extends View {
 
         invalidateDial(canvas);
 
-        invalidateTime(canvas);
+        int millisecond = invalidateTime(canvas);
 
         canvas.restore();
 
-        postInvalidateDelayed(1000);
+        postInvalidateDelayed(1000 - millisecond);
     }
 
     final void invalidate(Canvas canvas, Paint paint, float startY, float stopY, int degree) {
@@ -99,7 +99,7 @@ public class CustomWatch extends View {
         canvas.restore();
     }
 
-    private void invalidateTime(Canvas canvas) {
+    private int invalidateTime(Canvas canvas) {
         Calendar c = Calendar.getInstance();
         int hour = c.get(Calendar.HOUR_OF_DAY);
         if (hour >= 18 || hour <= 6) mMode = 1;
@@ -116,6 +116,8 @@ public class CustomWatch extends View {
 
         mPaint.setStrokeWidth(mHourPointerWidth);
         invalidate(canvas, mPaint, mSmallDotRadius, mHourPointerLen, c.get(Calendar.HOUR) * 30);
+		
+		return c.get(Calendar.MILLISECOND);
     }
 
     private void init(final int width, final int height) {
